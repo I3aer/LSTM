@@ -1,0 +1,13 @@
+net: "RNN_LSTM.prototxt"
+base_lr: 0.003                              #baseline learning rate
+momentum: 0.95                              #update_k = mu*update_(k-1) + base_lr*grad
+lr_policy: "step"                           #learn with base_lr * gamma ^ (floor(iter / step))
+gamma: 0.95
+stepsize: 1000                              #step parameter
+max_iter: 100000
+solver_mode: CPU
+regularization_type: "L2"                   #regularization term 
+weight_decay: 0.005                         #determines how dominant the regularization term 
+display: 2000                               #the number of iterations to display the value of loss 
+average_loss: 2000                          #the displayed loss averaged over the last n samples
+#debug_info: false
